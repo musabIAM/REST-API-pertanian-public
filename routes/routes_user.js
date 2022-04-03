@@ -1,0 +1,23 @@
+var express = require('express')
+var router = express.Router()
+
+var userController = require('../controller/user_webside')
+router.post('/tambah_lahan', userController.tambah_lahan)
+router.post('/tambah_group', userController.tambah_group)
+router.post('/tambah_zona', userController.tambah_zona)
+router.post('/tambah_device', userController.tambah_device)
+router.post('/set_status_device', userController.set_status)
+router.post('/tambah_schedule', userController.tambah_schedule)
+router.post('/tambah_setting', userController.tambah_setting)
+router.post('/tampil_lahan', userController.tampil_lahan_owner)
+router.post('/tampil_grup', userController.tampil_grup_lahan)
+router.post('/tampil_zona', userController.tampil_zona_grup)
+router.post('/tampil_zona_data', userController.tampil_data_zona)
+router.post('/tampil_shcedule_data', userController.tampil_schedule_byzona)
+router.post('/tampil_semua_schedule', userController.tampil_semua_schedule)
+router.post('/tampil_mac_soil', userController.get_soil_mac)
+router.post('/tampil_data_debit', userController.tampil_data_debit)
+router.post('/tampil_data_soil', userController.tampil_data_soil)
+router.post('/register_user', userController.register_user)
+
+module.exports = router
